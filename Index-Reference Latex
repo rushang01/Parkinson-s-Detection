@@ -1,0 +1,536 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[left=3cm, right=3cm, top=3cm, bottom=3cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{fancybox}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+
+\pagestyle{fancy}
+\linespread{1.5}
+\setlength{\headheight}{14.49998pt}
+
+
+\title{Detection Of Parkinson's Disease Using Machine Learning and Deep Learning Tools}
+\author{Shefali Agarwal ,Rushang S}
+\date{July 2022}
+
+\begin{document}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{Batch }
+\fancyhead[RE,LO]{Detection Of Parkinson's Disease}
+\fancyfoot[RE,LO]{Department of Computer Science and Engineering,DSCE }
+\fancyfoot[LE,RO]{\thepage}
+
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+
+
+\newpage
+ \pagestyle{fancy}
+\tableofcontents
+\hfill
+\listoffigures
+
+\newpage
+  \pagestyle{fancy}
+\pagenumbering{arabic}
+
+\chapter{Introduction}
+Parkinson's disease is a neurodegenerative disease that affects the functioning of the central nervous system and thus the body. The number of neurons in the human brain is maximum at birth. Neurons begin to die with age and become irreplaceable because they are incapable of growing when the elderly die. This is the main cause of Parkinson's disease. It is commonly observed to affect people over the age of 50. Neurons produce the chemical fluid dopamine. Dopamine is solely responsible for moving around the body and transmitting signals between neurons. As dopamine levels begin to decline with age, our neurological state begins to slow down under the influence of various modes of communication in the brain. These effects appear so slowly that they are usually not visible until the patient's condition worsens. Symptoms include loss of balance, slow movement, and postural instability.
+
+WHO records indicate that the disease affects nearly 10 million people worldwide. The patient is not diagnosed at an early stage and results in irreparable permanent neuropathy. This research aims to develop a deep learning model that implements CNN (Convolutional Neural Networks) for objective diagnosis of Parkinson's disease in the early stages. The recent introduction of neural networks has changed the level of scientific and industrial research and is being applied to medical imaging for segmentation, lesion detection, and disease classification. Significantly improved detection of various neurological disorders such as epilepsy, schizophrenia and Alzheimer's disease. Our study will use key features such as biomarkers from cerebrospinal fluid (CSF) measurements, dopamine transporter imaging, and FP-SPECT imaging to predict disease and the dataset included in the study. Is from the Parkinson's Disease Progression Marker Initiative Database (PPMI)
+
+
+\section{Deep Learning}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1]{media/image_1.png}
+\caption{Deep Learning with 3 hidden layers}
+\end{figure}
+In-depth learning is part of machine learning. This is a neural network that includes three or more layers. These neural networks attempt to mimic the behavior of the human brain, which, far from their capacity, allows them to "learn" from a large amount of data. Neural networks with only one layer make difficult predictions, but adding hidden layers helps to improve accuracy.
+In-depth learning enhances automation and develops many applications based on artificial intelligence (AI) and services that perform analytical and physical functions without human intervention. In-depth study of the technology behind all everyday products and services (such as digital assistants, voice TV remote controls, credit card fraud detection) and new technologies (such as self-driving cars).
+Deep Learning with 3 hidden layers
+
+\subsection{Convolutional Neural Network}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{media/image_2.png}
+\caption{CNN Working}
+\end{figure}
+The convolutional neural network (ConvNet / CNN) takes the embedded image and assigns the value to various elements or objects in the image, one at a time. CNN requires very little pre-processing compared to other classification algorithms. Older methods require the development of a well-trained and hand-made filter, but ConvNet has the ability to study these filters / structures. I
+ConvNet architecture resembles the connecting pattern of neurons in the human brain and is stimulated by visual cortex alignment. The single neurons react only to the system which has a defined field of view which is known as receiving fields. The collection of all such fields is extended to cover the entire visual cortex.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{media/image_3.png}
+\caption{CNN Sequence for Classifying Handwritten Numbers}
+\end{figure}
+
+
+n{}
+
+
+\section{Machine Learning}
+Machine Learning is a learning field  that gives computers or machines  the ability to read or learn  without any preconceived notions. ML is one of the most exciting technologies one has ever seen. As can be seen from the name, it provides a computer that makes it more like humans: The ability to read. Machine learning is in use today, perhaps in more places than one might expect.
+ML deals with processing a large amount of data to the machine so that it can learn and make future predictions . The machine learns in 3 different techniques namely 
+\begin{itemize}
+\item Supervised Learning 
+\item Unsupervised Learning 
+\item Reinforcement Learning .
+\end{itemize}
+
+
+\subsection{SVM}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{media/image_4.png}
+\caption{SVM}
+\end{figure}
+Support Vector Machines or SVMs are one of the most widely used learning methods used in both classification and deterioration.
+SVM is used for many mechanical classification problems. The goal of the SVM algorithm is to create precise lines or parameters that can divide n-dimensional space into classes so that new data points can be easily separated in the future. This best decision limit is called the hyperplane. I
+SVM selects extrema / vectors to help create hyperplanes. The algorithm is called a support vector machine because these extreme cases are called support vectors. Consider the following illustration. Here are two different categories that are separated by decision boundaries or hyperplanes.
+
+\subsection{Random Forest}
+Random Forest is a standard machine learning algorithm that is part of supervised learning strategies. It can be used for both ML segregation and retrospective problems. It is based on the concept of integrated learning, which brings together multiple dividers to solve complex problems and improve model performance.
+As the name implies, "Random Forest is a group that takes a set of decision trees from different subtropical sets and takes a measure to improve the accuracy of predicting that data. Instead of relying on decision trees, Random Forest gets predictions.
+The greater the number of trees in the forest, the greater the accuracy and avoidance problems of overcrowding.
+The following figure shows how the Random Forest algorithm works.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{media/image_6.png}
+\caption{Random Forest}
+\end{figure}
+Random Forest Assumptions\\
+Random forests include many trees to predict the database phase, so some decision trees may predict positive output and some may predict positive output. I have. It may not be. But together all the trees predict the right result. So, here are two ideas for better informal forest division:
+\begin{itemize}
+\item The separator requires real values of dynamic data elements to predict more accurate results than standard results.
+\item It is Predictions from each tree require very little correlation.
+\end{itemize}
+
+
+
+
+
+\section{Precision}
+Accuracy is a metaphor that often describes how a model works in all classes. It is useful when all classes are equally important. It is calculated from the average number of correct predictions to the total number of predictions.
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{media/image_7.png}
+\caption{Precision Formula}
+\end{figure}
+
+
+\section{Accuracy}
+Accuracy is calculated as the ratio of the number of samples categorized accordingly to the total number of samples considered positive (true or false). Accuracy measures the accuracy of the model when separating the sample as positive.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{media/image_8.png}
+\caption{Accuracy Formula}
+\end{figure}
+
+
+\section{Recall}
+Recall is calculated as the ratio of the number of positive sample segments appropriately divided as positive to the total number of positive samples. Memory measures the model's ability to obtain good samples. When the memory was high, very good samples were obtained
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{media/image_9.png}
+\caption{Recall formula}
+\end{figure}
+
+\section{Project Organization}
+
+The project report is organized as follows:
+
+In Chapter(2), we discuss about the problem statement and the solution to our problem. We also elaborate on the existing systems that deal with it.. In Chapter(3), we discuss about the literature survey of the papers to the problem statement and proposed solution. In Chapter(4), we explain the system outline and data flow diagram . In Chapter(5), we discuss about the data-set used and the prepossessing methodology; along with the implementation details. In Chapter(6), we talk about the testing of the project. In Chapter(7),we talk about the results of the models and compare various models together.We later move on to the conclusion of this paper followed by the reference from where we took help
+
+\chapter{Problem Statement and Proposed Solution}
+
+\section{Problem statement}
+Promoting in-depth reading and machine learning structures to help diagnose Parkinson's disease in its prodromal stages using voice sets.
+
+\section{Existing System}
+\subsection{Unified Parkinson’s Disease Rating Scale (UPDRS)}
+Examination done by a neurologist is the first and foremost diagnostic assessment required for detection of Parkinson’s disease.
+A diagnosis is done  based on:
+\begin{itemize}
+\item A detailed report including medical history report
+\item medical symptoms and medications.
+\end{itemize}
+
+A detailed examination done by a neurologist based on a task to assess tremors, improper posture, speech and writing irregularities.
+A Unified Parkinson’s Disease Rating Scale(UPDRS) is used to record your reports in the form of a table.It is the most generally applied rating instrument for Parkinson sickness.
+The Total UPDRS score incorporates 31 things adding to three subscales:
+ 
+\begin{enumerate}
+\item Mentation,Conduct, and Mood;
+\item Daily Activities; and
+\item  Motor Examination 
+\end{enumerate}
+
+The UPDRS incorporates an assessment of extrapyramidal engine capability and has been displayed to foresee actual execution measures with serious areas of strength for a part.This is a widespread scale utilized by nervous system specialists and development problem experts to survey and record the test of an individual with PD at a benchmark, judge the impact of drug and track the movement of illness during future visits extensively
+
+
+\subsection{DaTscan}
+A DaTscan is an imaging innovation that utilizes limited quantities of a radioactive medication to assist with deciding how much dopamine is accessible in an individual's cerebrum.
+DaTSCAN is for symptomatic use only. It is utilized to identify the deficiency of nerve cells in a space of the cerebrum called the striatum, explicitly the phones that discharge dopamine, a substance courier.
+Development issues like those found in Parkinson's illness and other related illnesses, where a deficiency of nerve cells prompts quake (shaking), stride aggravation (issues with the way the patient strolls) and firmness of the muscles. Since quakes can likewise happen in 'fundamental quakes', DaTSCAN is utilized to assist with recognizing fundamental quakes and illnesses connected with Parkinson's illness.
+DaTSCAN is utilized only in patients who have been alluded to by a specialist with experience in the administration of development issues or dementia. It is just taken care of and given by individuals who have insight in the protected treatment of radioactive materials.
+
+
+\subsection{Levodopa}
+Regarded as a gold standard, Levodopa is the most formidable medication utilized for the treatment of Parkinson’s disease.Levodopa works by crossing the blood-mind impediment, the complicated meshwork of veins and cells that channel blood showing up at the frontal cortex, where it is changed over into dopamine.Levodopa itself can produce queasiness and inflammation. It is joined with carbidopa to forestall this aftereffect.
+The different types of Levodopa includes:
+\begin{itemize}
+\item Carbidopa/levodopa Immediate Release Tablets (Sinemet)
+\item Carbidopa/levodopa Controlled Release Tablets (Sinemet CR*)
+\item Carbidopa/levodopa orally disintegrating tablets (Parcopa)
+\item Carbidopa/levodopa enteral Suspension (Duopa)
+\item Carbidopa/levodopa Extended Release capsules (Rytary)
+\end{itemize}
+
+
+\section{Proposed solution}
+The early recognition of Parkinson's Disease is crucial as the opportunities to be restored of the sickness is high.Medicines, for example, levodopa are more visible when regulated early. Non-pharmacological medicines, for example, practice are not difficult to perform if PD is distinguished in beginning phases and can help slowdown  movement of  infection.This drove us to chip away at the undertaking of early identification of Parkinson's Disease so that, distinguishing the PD at beginning phase could help the patients and could help them to recuperate soon.
+
+\subsection{System Functions}
+The system should be able to serve the following functions:
+\begin{enumerate}
+    \item Take the Voice Data set
+    \item Find features in voice.
+    \item Divide the data set into training and testing data set
+    \item Fit the models with training data set and test it .
+\end{enumerate}
+
+
+\chapter{Literature Survey}
+
+\subsubsection{Current Status of Application\cite{1}}
+
+Authors: HAKAN GUNDUZ
+
+A typical dataset utilized is the UCI Parkinson's dataset, which is made out of a scope of biomedical voice assessments from 31 individuals and 23 individuals with Parkinson's illness. This dataset separates the healthy individuals from those with PD.The dataset was made by Max Little of the University of Oxford, in a joint effort with the National Center for Voice and Speech, Denver, Colorado, who recorded the discourse signals. The main survey disseminated the component extraction procedures for general voice problems.Every area in the table is a particular voice measure, and each line relates one of 195 voice recording from these individuals ("name" segment).The chief mark of the data is to isolate strong people (with PD), according to "status" area which sets to 0 for sound and 1 for PD.
+
+
+\subsubsection{Detection using Machine Learning/Deep Learning}
+The rise of AIML makes it conceivable to make human connection points while keeping the execution easy to program, straightforward and exceptionally viable.
+
+\textbf{Paper: } Detection of Parkinson’s Disease using Machine Learning/Deep Learning , 2022
+
+
+\textbf{Description}:  The objective of this research is to propose different profound
+learning and AI designs all together to assist with distinguishing Parkinson illness utilizing voice sets.The model is made to recognize between healthy subjects and PD subjects in view of gait and different estimations.
+
+\textbf{Methodology}: It uses a UCI Parkinson dataset which is made out of a scope of biomedical voice assessments from 31 healthy people and  23 diagnosed with Parkinson.Subsequent to gathering every one of the information required, machine learning and profound learning strategies are applied  in solicitation to make and prepare a model. This model can then be used to support a cell phone application to foresee, as precisely as could really be expected, whether the client has Parkinson's sickness or the probability that they have it.
+
+\textbf{Pros}:The surmise from the review that such symptomatic models could possibly be utilized as a guide in clinical settings by essential doctors when PD specialists are not free, for distinguishing PD and furthermore for recognizing subjects for clinical preliminaries.
+
+\textbf{Con}: Current study does not operate as a real time application.
+
+
+
+\chapter{Architecture And Design}
+
+\section{Architecture workflow}
+This section focuses on how the application will run step by step.
+Fig 4.1 shows the entire workflow of the project  
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.8]{media/image_10.png}
+\caption{Workflow}
+\end{figure}
+
+Explanation of the diagram :\\
+First the program is run or restarted.The application then collects the data from the uci repository. After the data is imported, we clean the data and take features that are important, in our case we filter out 22 features. After the data is cleaned and preprocessed, this data is sent to ML algorithms ,namely SVM and Random Forest Classifiers and the data  is also sent to the CNN model.
+The models are built and then fitted with training and testing data.
+The results are displayed in a different way for deep learning algorithms and machine learning algorithms.For deep learning algorithms ,namely CNN we plot a loss curve and accuracy curve meanwhile for machine learning algorithms we just display the accuracy , precision and recall for the model .
+
+
+\chapter{Implementation}
+
+\section{Implementation platform}
+\subsection{Hardware requirements}
+\begin{enumerate}
+    \item 64-bit Processor (Intel i3, Apple M1, and above).
+    \item 4 GB ram and above.
+    \item Nvidia Cuda supported system (optional, for better training efficiency).
+\end{enumerate}
+
+\subsection{Software Requirements}
+\begin{enumerate}
+    \item Python 3.5
+    \item Keras
+    \item Tensorflow 1.15
+    \item Scikit-Learn
+    \item Scikit-Image
+    \item Pandas
+    \item Numpy
+    \item Matplotlib
+\end{enumerate}
+
+\section{Dataset}
+The dataset used is the UCI(University of California Irvine) Parkinson’s Dataset. Voice measurements of 31 people were taken with 23 of them having PD. Each column in the dataset represents a separate feature, and the rows represent the voice recordings from each individual. The main goal of the data is to differentiate healthy people from those with PD, according to the "status" column which has a value of 0 for healthy individuals and 1 for those suffering from PD.
+
+Format of the data is ASCII CSV. Each row of the CSV file contains an instance corresponding to one voice recording. Each column in the dataset is a separate feature. One of these columns is the “status” column which reveals if a specific patient has PD or not. This dataset is one of the most widely used datasets in research involving detection of PD. In our project, we make use of the entire dataset. However, a major part of it is utilized as training data and the rest is testing data. 
+
+
+\hspace{0.2cm}
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.75]{media/image_11.png}
+\caption{Dataset.}
+\label{fig:architecture}
+\end{figure}
+
+\section{Data preprocessing}
+The makeup of our dataset is as follows - 
+\hspace{0.5cm}
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.9]{media/image_12.png}
+\caption{Dataset makeup.}
+\label{fig:architecture}
+\end{figure}
+
+It is clearly seen that the number of recordings of patients with PD is much higher than the number of recordings of patients without PD. There is thus a clear frequency imbalance and a bias towards the recordings with PD. The ratio of the number of recordings of patients with PD to the number of recordings of patients without PD is 3.0625.
+
+In order to resolve the resulting inaccuracies, class weights have been used. These have been provided in a ratio of 3:1 to closely match the class frequency imbalance.
+
+The dataset is divided into two. The training dataset is used to fit the model and the testing dataset is given as input to the model. 70 percent of the data is training data and the rest of the data is the testing data.
+
+\section{Models}
+\subsection{Machine learning models}
+
+Two of the most popular machine learning models in PD detection have been used : 
+
+\begin{itemize}
+\item SVM - SVM is a supervised kernel based ML algorithm that understands the classified training data first and then classifies the testing data. It outperforms many other algorithms when presented with a classification task. Since the number of subjects used is limited, SVM is preferred here. The SVM Classifier used is from the Scikit-Learn library of Python.
+\item Random Forest - Random Forest is an ensemble method that learns the results of decision trees randomly. It tends to help against overfitting and does not get affected by outliers too much. The Random Forest Classifier used is from the Scikit-Learn library of Python.
+\end{itemize}
+
+\subsection{Deep Learning Model}
+
+CNN - Convolutional Neural Networks are variants of neural networks. CNN is primarily used to learn images but can be used for audio as well. This is done by using features which look like images and feeding them to the model.
+
+The model is built using one input layer and five dense layers.Rectified Linear Unit is the activation function used in the first four dense layers. ReLU is used as it has been found to perform better than other activation functions for training neural networks on bigger datasets. Since binary classification is done, the activation function used for the final output layer is the sigmoid activation function.
+
+The adam optimizer is used as it generally works better than other algorithms. 
+
+A batch size of 16 is used and the number of epochs is 25.
+
+Steps vs epochs : 
+
+In a single step, 16 voice recordings are processed. Each epoch consists of one full cycle of the training data.
+
+
+
+The following is the summary of the model : 
+\hspace{0.5cm}
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.9]{media/image_13.png}
+\caption{Summary of the model.}
+\label{fig:architecture}
+\end{figure}
+
+\chapter{Testing}
+
+What exactly is testing?
+Testing is a process of verifying or checking whether the application developed is working in the desirable manner or not .
+Testing is a very crucial part of the application ,as it helps the developer understand the bugs and solve them, reducing the development costs and improving performance of the application.\\
+
+We have tested all the 3 models separately. 3 test cases have been shown below for each model. The results were found to be high consistently across the board for the CNN model.
+\\
+For SVM, different kernels have been used for testing.
+
+\hspace{0.5cm}
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.9]{media/svm.png}
+\caption{Testing SVM Model.}
+\label{fig:architecture}
+\end{figure}
+
+\hspace{0.5cm}
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.9]{media/random_forest.png}
+\caption{Testing Random Forest Model.}
+\label{fig:architecture}
+\end{figure}
+
+\hspace{0.5cm}
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.9]{media/cnn.png}
+\caption{Testing CNN Model.}
+\label{fig:architecture}
+\end{figure}
+
+
+\chapter{Experimental Results}
+This Section focuses on the results achieved by the CNN models and Machine Learning algorithms.
+Before diving into this section we need to remember that the results of the models keep changing with every run. The results displayed here are the best and the most frequently occurring results.
+
+
+\section{CNN Results}
+This section explains the details of experimental results obtained by our proposed CNN architecture.
+To understand the results of this model, we plotted a loss curve and an accuracy curve.
+
+\subsection{Loss Curve}
+
+It is one of the most commonly used graphs as it helps us understand and eliminate errors from the neural network . This graph helps us understand how the model is learning and gives us an insight on the training data .
+Fig 7.1 shows the learning rate of models.
+\clearpage
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.7]{media/image_14.png}
+\caption{Ideal Loss Curve.}
+\end{figure}
+Now if we look into our models results ,which are shown in Fig 7.2 \\
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.7]{media/image_15.png}
+\caption{Loss Curve(Results)}
+\end{figure}
+Here loss (line represented in blue) stands for training data and val loss (line represented in yellow) stands for testing data .\\
+Training data is a set of data which the model has seen already ,meanwhile testing data is a dataset which the model has never seen .\\
+Upon close examination we notice that our training data has a good learning rate ,meanwhile our testing data shows a very high learning rate ,showing that our model has good learning rate 
+
+\subsection{Accuracy Curve}
+
+It is another graph which is commonly used in understanding the CNN model. In English accuracy means correctness or precision,similarly accuracy curve helps us understand the precision of the model.Fig 7.3 shows the accuracy of any mod
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.7]{media/image_16.png}
+\caption{Ideal  Accuracy Curve }
+\end{figure}
+The distance between validation accuracy and accuracy is a clear indication of over-fitting .Over-fitting in simple terms is nothing but the model knowing its training data so well that it affects the performance of the new data.
+Since the model is so used to the training dataset ,it cannot see new patterns of the testing data ,and hence negatively impact the accuracy.
+\newpage
+
+Now if we look into our models results ,which are shown in Fig 7.4\\
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.7]{media/image_17.png}
+\caption{Accuracy Curve(Results)}
+\end{figure}
+\\
+Accuracy(line represented in blue) in the graph represents the training accuracy and valaccuracy(line represented in yellow) shows the accuracy of the testing data.
+Here we can observe that since there is less distance between the accuracy and valaccuracy , our model isnt overfitting which is desired.
+
+\subsection{Accuracy}
+The accuracy of the model is taken on the testing dataset . The results of this model are reflected in Fig 7.5. The results show that the model gives an Accuracy of  94.92%.
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.7]{media/image_18.png}
+\caption{Resultant Accuracy of Cnn model}
+\end{figure}
+\\
+\section{ML Results}
+This section explains the details of experimental results obtained by the proposed ML architectures.
+Two ML algorithms are plotted here,the Random Forest Classifier(RFc) and the Support Vector Machine(SVM) Algorithm.
+\subsection{Random Forest Classifier (RFC)}
+We have seen what Random Forest Classifier is in section 1.2.2
+So if we proceed and look towards the results of this algorithm which are visible in  Fig 7.6, we see that the Random Forest classifier gives an accuracy of 94.9% .
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.7]{media/image_19.png}
+\caption{RFC Results}
+\end{figure}
+
+\subsection{Support Vector Machine(SVM)}
+We have seen what Support Vector Machine is in section 1.2.1
+Looking at the results of the SVM classifier ,which are reflected in Fig 7.7, we see that SVM gives an accuracy of 93.22% . 
+.
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.7]{media/image_20.png}
+\caption{ Svm results}
+\end{figure}
+
+\newpage
+\section{Results}
+
+After comparing all three models ,we come to a conclusion that even after multiple runs and changing results CNN gives the best accuracy of 95 percent with the highest average precision and recall whereas Random Forest and Support Vector Machine fall behind in the precision score despite the other metrics matching up to CNN.
+The results for all three models are compared side by side in the table Tbl 7.3 shown below. 
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.7]{media/image_21.png}
+\caption{}
+\end{figure}
+
+\chapter*{Conclusion}
+\addcontentsline{toc}{chapter}{Conclusion}  
+
+We know that Parkinson's disease is a neurological disease which only worsens with time, hence early detection of this disease is mandatory.
+And if we look at the existing system of detection of this disease, we see that detection is a lengthy process and moreover it's an expensive process. 
+Finding a cheap and a shorter process was the main goal of making this project. Hence Deep learning and machine learning tools come into the picture. These tools recognize and find patterns from 1000s of datasets and help detect patients with PD .Before making any model we had to understand PD.
+
+While studying about the disease we realized that this disease affects the vocal features of the patient in the initial stages. Hence focusing on the vocal features was important.
+Our dataset is taken from the UCI repository,this dataset consists of only voice data sets . This dataset consists of 188 pd patients and 48 healthy individuals . The data is then cleaned and preprosed. After this a function for accuracy is written and used in our random forest classifier and Support vector machine classifier ,to predict the accuracy of these models accurately .
+Then we looked into CNN models. A  model with 4 layers was built  and the dataset was divided into testing and training dataset and then fed into the model . 
+If we check the results section (7.3) we realize that CNN gives the best results.
+\textbf{Future Work}
+
+There is always room for improvement in everything, and so does this project. Currently we think that our project has limitations which can be eliminated by implementing these thing:
+  
+\begin{itemize}
+\item The dataset used in this project is very small ,so in the future we can increase our training and testing dataset to achieve better results with different types of data 
+\item Currently the model only works on pre-fed data,so in the future we can take data in real time.
+\item We can create a front end for this project where the user can speak into a mic to detect whether he/she has parkinson's disease or not at the comfort of their homes
+\end{itemize}
+
+
+
+
+
+
+
+
+\begin{thebibliography}{9}
+\addcontentsline{toc}{chapter}{Bibliography}  
+
+
+\bibitem{1}
+https://towardsdatascience.com/useful-plots-to-diagnose-your-neural-network-521907fa2f45#:~:text=Accuracy%20Curve&text=A%20more%20important%20curve%20is,gap%2C%20the%20higher%20the%20overfitting
+
+
+\bibitem{2}
+https://machinelearningmastery.com/overfitting-and-underfitting-with-machine-learning-algorithms///
+
+\bibitem{3}
+https://archive.ics.uci.edu/ml/datasets/parkinsons
+
+\bibitem{4}
+https://www.geeksforgeeks.org/introduction-deep-learning/
+
+\bibitem{5}
+
+https://www.javatpoint.com/machine-learning-support-vector-machine-algorithm
+
+\bibitem{6}
+
+https://medlineplus.gov/druginfo/meds/a601068.html#:~:text=Levodopa%20is%20in%20a%20class,before%20it%20reaches%20the%20brain.
+
+\bibitem{7}
+
+https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9
+
+\bibitem{8}
+
+https://www.javatpoint.com/machine-learning-random-forest-algorithm
+
+\bibitem{9}
+
+https://www.nia.nih.gov/health/parkinsons-disease
+
+\end{thebibliography}
+
+\end{document}
