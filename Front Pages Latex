@@ -1,0 +1,244 @@
+\documentclass[12pt,a4paper,twocolumn,fleqn]{article}
+\usepackage{graphicx}
+\usepackage[colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref}
+\usepackage{chngcntr}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\counterwithin{figure}{section}
+\usepackage[a4paper,top=20mm, bottom=30mm, left=18mm, right=18mm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{eso-pic}
+\usepackage[shortlabels]{enumitem}
+\usepackage{hyperref}
+\usepackage{lastpage}
+\usepackage{listings}
+\usepackage[]{algorithm2e}
+\usepackage{color}
+\usepackage{fancybox}
+\usepackage{lineno}
+\usepackage{xtab,booktabs}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{parskip}
+\usepackage[compact]{titlesec}
+\titleformat{\section}[block]{\color{black}\Large\bfseries\filcenter}{}{1em}{}
+\titlespacing{\section}{0pt}{*0}{*0}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\setlength\columnsep{25pt}
+\makeatletter
+\g@addto@macro{\normalsize}{%
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}}
+\makeatother
+\makeatletter
+\renewenvironment{abstract}{%
+    \if@twocolumn
+      \section*{\abstractname}%
+    \else %% <- here I've removed \small
+      \begin{center}%
+        {\bfseries \Large\abstractname\vspace{\z@}}%  %% <- here I've added \Large
+      \end{center}%
+      \quotation
+    \fi}
+    {\if@twocolumn\else\endquotation\fi}
+\makeatother
+\makeatletter
+\let\latexl@section\l@section
+\def\l@section#1#2{\begingroup\let\numberline\@gobble\latexl@section{#1}{#2}\endgroup}
+\makeatother
+\mathindent=0.0pt
+\usepackage{float}
+\renewcommand{\baselinestretch}{1.5}
+\AddToShipoutPictureBG*{%
+\begin{tikzpicture}[overlay,remember picture]
+\draw[line width=4pt]
+    ($ (current page.north west) + (1.3cm,-1.5cm) $)
+    rectangle
+    ($ (current page.south east) + (-1.3cm,1.5cm) $);
+\draw[line width=1.5pt]
+    ($ (current page.north west) + (1.5cm,-1.7cm) $)
+    rectangle
+    ($ (current page.south east) + (-1.5cm,1.7cm) $);
+\end{tikzpicture}
+}
+\begin{document}
+\pagestyle{empty}
+\onecolumn
+\begin{center}
+
+\text{\LARGE{DAYANANDA SAGAR COLLEGE OF ENGINEERING}} \\
+\footnotesize{(An Autonomous Institute affiliated to VTU, Belagavi, Approved by AICTE \& ISO 9001:2008 Certified)} \\
+\footnotesize{Accredited by National Assessment \& Accreditation Council (NAAC) with ‘A’ grade}  \\
+\footnotesize{Shavige Malleshwara Hills, Kumaraswamy Layout, Bengaluru-560078} \\
+\includegraphics[scale=0.15]{media/DSCE-min.png} \\
+\large{\textit{\textbf{Final Project Report} }} \\
+\textbf{\textit{on}}
+\\
+\smalskip
+\textcolor{black}{\LARGE{\textbf{“Detection Of Parkinson's Disease Using Machine Learning and Deep Learning Tools”}}} \\
+\bigskip
+
+
+
+\textit{Submitted By} \\
+\bigskip
+\textbf{Nusavolu Nyekha \space 1DS18CS084} \\
+\textbf{Rushang S       \space 1DS18CS108} \\
+\textbf{Shefali Agarwal \space 1DS18CS117} \\ 
+\textbf{Saurav Suman          \space 1DS18CS186} \\
+\bigskip
+{8th Semester,B.E.(CSE)} \\ 
+\bigskip
+\textit{Under the guidance of} \\
+\textbf{Prof. Suman M } \\
+\text{Asst. Professor Dept. of CSE} \\
+\text{DSCE,Bangalore}\\
+
+\Large{\textbf{2021 - 2022}} \\
+\large{\textit{\textbf{Department of Computer Science and Engineering}} \\
+\large{\textbf{\textit{DAYANANDA SAGAR COLLEGE OF ENGINEERING}}} \\
+\large{\textbf{Bangalore - 560078}} \\
+\end{center}
+%End of the page 
+\newpage
+\begin{tikzpicture}[overlay,remember picture]
+\draw[line width=4pt]
+    ($ (current page.north west) + (1.3cm,-1.5cm) $)
+    rectangle
+    ($ (current page.south east) + (-1.3cm,1.5cm) $);
+\draw[line width=1.5pt]
+    ($ (current page.north west) + (1.5cm,-1.7cm) $)
+    rectangle
+    ($ (current page.south east) + (-1.5cm,1.7cm) $);
+\end{tikzpicture}
+\begin{center}
+\text{\LARGE{VISVESVARAYA TECHNOLOGICAL UNIVERSITY}} \\
+\text{\LARGE{\textbf{Dayananda Sagar College of Engineering}}} \\
+
+\footnotesize{Shavige Malleshwara Hills, Kumaraswamy Layout, Bengaluru-560078} \\
+{\textbf{Department of Computer Science \& Engineering}} \\
+\begin{flushleft}
+\end{flushleft}
+\includegraphics[scale=0.15]{media/DSCE-min.png} \\
+\Large{\underline{\textbf{CERTIFICATE}}} \\
+  \end{center}
+\normalsize
+begin{\justify}
+This is to certify that the project entitled \textbf{"Detection Of Parkinson's Disease Using Machine Learning and Deep Learning Tools"} is a bonafide work carried out by \textbf{ Nusavolu Nyekha[1DS18CS084], Rushang S [1DS18CS108]}, \textbf{Shefali Agarwal [1DS18CS117]} and \textbf{Saurav Suman [1DS18CS186]} in partial fulfillment of 8th semester, Bachelor of Engineering in Computer Science and Engineering under Visvesvaraya Technological University, Belgaum during the year 2021-22. \\
+
+\\
+\textbf{Prof. Suman M}
+\hfill
+\hfill
+\textbf{Dr. Ramesh Babu D R}
+\hfill
+\textbf{Dr. C P S Prakash} \\
+\text{(Internal Guide)}
+\hfill 
+\text{Vice Principal \& HOD}
+\hfill
+\text{Principal\space\space\space\space\space\space\space} \\
+\text{Associate Prof.} 
+\hfill
+\text{CSE, DSCE}
+\hfill
+\text{DSCE \hspace{35pt}} \\
+\text{CSE, DSCE}
+\\
+\text{Signature:...........}
+\hfill
+\text{Signature:...........}
+\hfill
+\text{Signature:...........} \\
+
+\text{Name of the Examiners:}
+\hfill
+\text{Signature with date: \hspace{60}} \\
+\text{1...........................................}
+\hfill{.......................................................\\
+\text{2............................................} 
+\hfill{.......................................................\\
+%End of the page
+\newpage
+\begin{tikzpicture}[overlay,remember picture]
+\draw[line width=4pt]
+    ($ (current page.north west) + (1.3cm,-1.5cm) $)
+    rectangle
+    ($ (current page.south east) + (-1.3cm,1.5cm) $);
+\draw[line width=1.5pt]
+    ($ (current page.north west) + (1.5cm,-1.7cm) $)
+    rectangle
+    ($ (current page.south east) + (-1.5cm,1.7cm) $);
+\end{tikzpicture}
+\begin{center} 
+\LARGE{{\textbf{\underline{Acknowledgement}}}} \\
+\end{center}
+\normalsize
+We are pleased to have successfully completed the project \textbf{Detection Of Parkinson's Disease Using Machine Learning and Deep Learning Tools}. We thoroughly enjoyed the process of working on this project and gained a lot of knowledge doing so.
+\\
+\hfill
+\\
+We would like to take this opportunity to express our gratitude to \textbf{Dr. C P S Prakash}, Principal of DSCE, for permitting us to utilize all the necessary facilities of the institution.
+\\
+\hfill
+\\
+We also thank our respected Vice Principal, HOD of Computer Science \& Engineering, DSCE, Bangalore,\textbf{ Dr. Ramesh Babu D R}, for his support and encouragement throughout the process.
+\\
+\hfill
+\\
+We are immensely grateful to our respected and learned guide, \textbf{Prof. Suman M}, Associate Professor CSE, DSCE  for their valuable help and guidance. We are indebted to them for their invaluable guidance throughout the process and their useful inputs at all stages of the process.
+\\
+\hfill
+\\
+We would like to thank our project coordinators \textbf{Dr. Vindhya Malagi}, Associate Professor, CSE, DSCE for their guidance and support.We also thank all the faculty and support staff of Department of Computer Science, DSCE. Without their support over the years, this work would not have been possible.
+\\
+\hfill
+\\
+Lastly, we would like to express our deep appreciation towards our classmates and our family for providing us with constant moral support and encouragement. They have stood by us in the most difficult of times.
+\\
+\hfill
+\begin{flushright}
+\textbf{Nusavolu Nyekha \space 1DS18CS084} \\
+\textbf{Rushang S \space 1DS18CS108} \\
+\textbf{Shefali Agarwal \space 1DS18CS117} \\ 
+\textbf{Saurav Suma  \space 1DS18CS186}
+\end{flushright}
+%End of page
+\newpage
+\AddToShipoutPictureBG*{%
+\begin{tikzpicture}[overlay,remember picture]
+\draw[line width=4pt]
+    ($ (current page.north west) + (1.3cm,-1.5cm) $)
+    rectangle
+    ($ (current page.south east) + (-1.3cm,1.5cm) $);
+\draw[line width=1.5pt]
+    ($ (current page.north west) + (1.5cm,-1.7cm) $)
+    rectangle
+    ($ (current page.south east) + (-1.5cm,1.7cm) $);
+\end{tikzpicture}
+}
+\setstretch{1.5}
+\twocolumn[
+\begin{@twocolumnfalse}
+\begin{abstract}
+\newline
+Parkinson's disease (PD) is a chronic debilitating disease of the central nervous system mainly affects the automotive system. Symptoms usually appear gradually over time. As is related to brain abnormalities, electroencephalogram (EEG) signals are generally considered early diagnosis. Many other symptoms such as poor handwriting, voice impairment, loss of hearing odor, covered surface, etc. can be used for its detection. In this work, data for  Parkinson's detection ,UCI repository is used that contains voice datasets of Parkinson's affected patients and healthy individuals. In this project, we have proposed a model based on Neural Networks that aims to help doctors and individuals in diagnosing Parkinson's disease in the early stages. One of the neural networks decided to use Convolutional Neural Networks (CNNs) , established as a strong class of models. We also used a few machine learning tools to predict if the patient has parkinsons or not. We have tried to create a program that will automatically help diagnosing Parkinson's Disease based on the results of voice data for patients available to us. This project will help doctors diagnose the disease faster and more accurately as early diagnosis and treatment will help with earlier medication which helps in prolonging the ill effects of the disease.
+
+\end{abstract}
+\end{@twocolumnfalse}]
+\linenumbers
+\nolinenumbers
+\onecolumn
+\setcounter{page}{0}
+\newpage
+\pagenumbering{arabic}
+
+
+\end{document}
